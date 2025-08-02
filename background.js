@@ -1,4 +1,3 @@
-// Add context menu when extension is installed
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
       id: "identify-font",
@@ -7,7 +6,6 @@ chrome.runtime.onInstalled.addListener(() => {
     });
   });
   
-  // When user clicks on the right-click menu
   chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "identify-font") {
       chrome.scripting.executeScript({
@@ -17,7 +15,6 @@ chrome.runtime.onInstalled.addListener(() => {
     }
   });
   
-  // Function that runs inside the webpage to get font details
   function getFontInfo() {
     const selection = window.getSelection();
     if (!selection.rangeCount) return;
