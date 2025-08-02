@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Font Identifier",
+    "version": "1.0",
+    "description": "Identify font properties of selected text.",
+    "permissions": ["scripting", "activeTab", "contextMenus"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "32": "icon32.png"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png"
+    }
+  }
+  
+  
